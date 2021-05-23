@@ -1,8 +1,7 @@
 Feature: Create a new Lead in Leaftaps
 
 Background:
-Given Launch Chrome browser
-When Load URL 'http://leaftaps.com/opentaps'
+Given Load URL 'http://leaftaps.com/opentaps'
 And Type username as 'DemoSalesManager'
 And Type password as 'crmsfa'
 And Click Login Button
@@ -10,6 +9,8 @@ Then Verify Login is successful
 And Click CRM SFA Link
 And Click Leads Tab
 
+
+@smoke @Hari
 Scenario Outline: Create a new Lead with mandatory fields
 
 When Click Create Lead Menu
@@ -22,4 +23,3 @@ And Verify the lead is created
 Examples:
 |companyName|firstName|lastName|
 |TestLeaf|Hari|Radhakrishnan|
-|Qeagle|Babu|Manickam|

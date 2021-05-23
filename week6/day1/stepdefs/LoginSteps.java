@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,14 +19,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginSteps extends BaseSteps {
 	
-	@Given("Launch Chrome browser")
-	public void launchBrowser() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		wait =  new WebDriverWait(driver, 10);
-	}
 	
 	@When("Load URL {string}")
 	public void loadUrl(String url) {

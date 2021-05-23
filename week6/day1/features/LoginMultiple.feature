@@ -2,8 +2,7 @@ Feature: Login to the Leaftaps Application
 
 Background:
 
-Given Launch Chrome browser
-When Load URL 'http://leaftaps.com/opentaps'
+Given Load URL 'http://leaftaps.com/opentaps'
 
 Scenario Outline: Login Multiple Data
 
